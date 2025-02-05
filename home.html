@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenGrow - Fertilizer Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #b7eccd;
+        }
+        header {
+            background: #b7eccd;
+            color: rgb(18, 18, 18);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 60px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #27ae60;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('garden-banner.jpg') no-repeat center center/cover;
+            color: rgb(14, 14, 14);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .about, .contact-form {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product {
+            background: rgb(253, 253, 253);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px rgba(196, 12, 12, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #b05c5c;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form .radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="GreenGrow Logo" class="logo">
+        <h1>GreenGrow - Your Green Companion</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
+    <div class="hero">
+        <h2>Premium Quality Fertilizers & Gardening Supplies</h2>
+    </div>
+
+    <div class="container">
+        <h2 id="products">Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="organic.jpg" alt="Organic Fertilizer">
+                <h3>FERTILIZERS</h3>
+                <a href="organic.html">Learn More</a>
+            </div>
+            <div class="product">
+                <img src="equipments.jpg" alt="Gardening Equipments">
+                <h3>EQUIPMENTS</h3>
+                <a href="equipments.html">Learn More</a>
+            </div>
+            <div class="product">
+                <img src="seeds.jpg" alt="Seeds">
+                <h3>SEEDS</h3>
+                <a href="seeds.html">Learn More</a>
+            </div>
+        </div>
+
+        <section id="contact" class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <p>Gender:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+                <p>Select Your Inquiry Type:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="inquiry" value="product" required> Product Inquiry</label>
+                    <label><input type="radio" name="inquiry" value="order"> Order Support</label>
+                    <label><input type="radio" name="inquiry" value="general"> General Inquiry</label>
+                </div>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>GreenGrow provides high-quality fertilizers, gardening tools, and seeds to help your garden flourish. Our mission is to promote eco-friendly and sustainable gardening solutions.</p>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>Email: info@greengrow.com | Phone: +123 456 7890</p>
+        <p>&copy; 2025 GreenGrow. All rights reserved.</p>
+    </div>
+</body>
+</html>
